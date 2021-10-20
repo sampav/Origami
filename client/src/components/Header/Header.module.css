@@ -1,0 +1,17 @@
+.navigation {
+    width: 100%;
+    height: 20vh;
+    background-color: #234465;
+    color: white;
+    position: fixed;
+    top: 0;
+    border-bottom: 5px solid hsl(106, 100%, 50%);
+    border-top: 5px solid #48ff00;
+  }
+
+  .Container {
+    margin-top: 8.5%;
+    padding: 0.5%;
+    /* border: 1px solid purple; */
+    margin-bottom: 0.1%;
+  }

@@ -1,27 +1,42 @@
+import { Component } from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import Menu from './components/Menu';
 
 import style from './App.module.css';
 
-function App() {
-  return (
-    <div className={style.app}>
-      <h1>Let's Go!</h1>
+//******************Function Component !!!! ****************///
 
-      <nav className={style.navigation}>
-          <ul>
-              <li className="listItem"><img src="white-origami-bird.png" alt="white"/></li>
-              <li className="listItem"><a href="#">Going to 1</a></li>
-              <li className="listItem"><a href="#">Going to 2</a></li>
-              <li className="listItem"><a href="#">Going to 3</a></li>
-              <li className="listItem"><a href="#">Going to 4</a></li>
-              <li className="listItem"><a href="#">Going to 5</a></li>
-              <li className="listItem"><a href="#">Going to 6</a></li>            
-              <li className="listItem"><a href="#">Going to 7</a></li>
-              <li className="listItem"><a href="#">Going to 8</a></li>
-              <li className="listItem"><a href="#">Going to 9</a></li>
-          </ul>
-      </nav>
-    </div>
-  );
+// function App() {
+//   return (
+//     <div className={style.app}>
+//         <Header />            
+     
+//         <div className={style.container}> 
+//           <Main />
+
+//           <Menu />
+//         </div>      
+//     </div>
+//   );
+// }
+
+////******************Class Component !!!! ****************///
+
+class App extends Component {
+    render() {
+      return (
+        <div className={style.app}>
+            <Header />            
+         
+            <div className={style.container}> 
+              <Main />
+    
+              <Menu />
+            </div>      
+        </div>
+      );
+    }
 }
 
 export default App;

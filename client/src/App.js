@@ -1,8 +1,10 @@
 import { Component } from 'react';
+
+import * as postServices from './services/postServices';
+
 import Header from './components/Header';
 import Main from './components/Main';
 import Menu from './components/Menu';
-
 import style from './App.module.css';
 
 //******************Function Component !!!! ****************///
@@ -24,13 +26,28 @@ import style from './App.module.css';
 ////******************Class Component !!!! ****************///
 
 class App extends Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        posts: []
+      }
+    }
+
+    componentDidMount(){
+        postServices.getAll()
+          .then(posts => {
+              this.setState({posts})
+          });
+    }
+
     render() {
       return (
         <div className={style.app}>
             <Header />            
          
             <div className={style.container}> 
-              <Main />
+              <Main posts={this.state.posts}/>
     
               <Menu />
             </div>      

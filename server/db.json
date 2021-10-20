@@ -2,12 +2,12 @@
     "posts": [
         {
             "id": 1,
-            "content": "Content",
+            "content": "Some content",
             "author": "Kolio"
         },
         {
             "id": 2,
-            "content": "Content",
+            "content": "More content",
             "author": "Boko"
         }
     ]

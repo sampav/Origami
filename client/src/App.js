@@ -3,6 +3,7 @@ import { Component } from 'react';
 import * as postServices from './services/postServices';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Main from './components/Main';
 import Menu from './components/Menu';
 import style from './App.module.css';
@@ -30,7 +31,8 @@ class App extends Component {
       super(props);
 
       this.state = {
-        posts: []
+        posts: [],
+        selectedPost: null,
       }
     }
 
@@ -41,16 +43,32 @@ class App extends Component {
           });
     }
 
+    onMenuItemOnClick(id) {
+       this.setState({selectedPost: id});
+        
+    }
+
+    getPosts() {
+      if (!this.state.selectedPost) {
+        return this.state.posts;
+      } else {
+        return [this.state.posts.find(x => x.id == this.state.selectedPost)]
+      }
+    }
+
     render() {
       return (
         <div className={style.app}>
             <Header />            
          
             <div className={style.container}> 
-              <Main posts={this.state.posts}/>
+              <Main posts={this.getPosts()}  />
     
-              <Menu />
-            </div>      
+              <Menu onMenuItemOnClick={this.onMenuItemOnClick.bind(this)} />
+              
+            </div>    
+
+            <Footer />  
         </div>
       );
     }

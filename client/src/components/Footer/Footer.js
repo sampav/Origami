@@ -5,7 +5,7 @@ const Footer  = () => {
 
     return (
             <nav className="navigation">
-                <ul>                   
+                <ul className="navigation">                   
                         <FooterNavItem>Going to 1</FooterNavItem>
                         <FooterNavItem>Going to 2</FooterNavItem>
                         <FooterNavItem>Going to 3</FooterNavItem>

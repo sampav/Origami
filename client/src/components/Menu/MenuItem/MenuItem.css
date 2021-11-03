@@ -1,5 +1,5 @@
 .menu-item {
-    display: block;
+    display: inline-block;
     width: 10%;
     border-left: 2px solid #234465;
     border-right: 2px solid #234465;
@@ -27,5 +27,5 @@
 }
 
 .menu-item-selected {
-    background-color: aqua;
+    background-color: rgb(15, 240, 71);
 }

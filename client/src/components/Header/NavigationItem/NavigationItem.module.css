@@ -25,19 +25,3 @@
     border-bottom: 5px solid #ff1e00;
     font-weight: bold;
 }
-
-footer .listItem:nth-child(1) {
-  margin-left: 1%;
-}
-
-nav .listItem:not(:first-child) {
-  padding: 2%;
-  margin-top: 1.5%;
-  border-top: 2px solid #ffa000;
-}
-
-footer .listItem:not(:last-child) {
-  padding: 2%;
-  margin-top: 1.5%;
-  border-bottom: 2px solid #234465;
-}

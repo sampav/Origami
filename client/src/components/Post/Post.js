@@ -8,7 +8,7 @@ const Post = ({
   return (
       <div className="post-container">
           <img src="/blue-origami-bird.png" alt="blue origami"/>
-          <p className="post-description">
+          <p className="post-description" >
               {content}
           </p>
           <div>

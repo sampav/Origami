@@ -4,8 +4,9 @@ function FooterNavItem(props) {
 
     return (
         <li className="footerListItem">
-            <a href="#" className={style.footerListItem}>{props.children}</a>
+            <a href="#" >{props.children}</a>
         </li>
+         
     )
 }
 
